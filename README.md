@@ -1,4 +1,4 @@
-# Knowlege
+# Misc
 
 ## Docker
 
