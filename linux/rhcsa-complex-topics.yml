@@ -1,0 +1,32 @@
+Red Hat Schulung Complex:
+  Konfiguration von Systemen für das automatische Booten in einem bestimmten Target
+  Manuelles Starten von Systemen in verschiedenen Targets
+  Konfiguration einer physischen Maschine für das Hosten virtueller Gäste
+  Installation von Red Hat Enterprise Linux Systemen als virtuelle Gäste
+  Konfiguration von Systemen für den Start virtueller Maschinen beim Booten
+  Konfiguration eines Systems für die Verwendung eines vorhandenen Authentifizierungsservices für Benutzer und Gruppeninformationen
+  Unterbrechung des BootProzesses zwecks Systemzugriff
+  Erfassen, Erstellen und Löschen von Partitionen auf MBR und GPTFestplatten
+  Erstellen und Entfernen physischer Laufwerke, Zuweisen physischer Laufwerke zu Laufwerkgruppen sowie Erstellen und Löschen logischer Laufwerke
+  Hinzufügen neuer Partitionen und logischer Datenträger sowie zerstörungsfreier Wechsel auf ein System
+  Erweitern vorhandener logischer Datenträger
+  Erstellung und Konfiguration von setGIDVerzeichnissen für die Zusammenarbeit
+  Erstellung und Verwaltung von Zugriffskontrolllisten (ACLs)
+  Diagnose und Behebung von Problemen bei Dateiberechtigungen
+  Aufgabenplanung mithilfe von at und cron
+  Konfiguration von schlüsselbasierter SSHAuthentifizierung
+  Festlegung der Modi „enforcing" und „permissive" für SELinux
+  Aufführung und Identifizierung des Datei und Prozesskontexts unter SELinux
+  Diagnose und Behebung routinemäßiger Richtlinienverstöße in SELinux
+  Wiederherstellung von StandardDateikontexten
+  Änderung von SELinuxSystemeinstellungen mit booleschen Einstellungen
+  Modifizierung des SystemBootloaders
+  Konfiguration eines Systems für die Verwendung von Zeitdiensten
+  Identifizierung von Prozessen mit hoher CPU oder Speicherauslastung, Anpassung der Prozesspriorität mit renice und Abbrechen von Prozessen
+  Starten und Beenden von Services sowie Konfiguration von Services für den automatischen Start beim Booten
+  Automatische Installation von Red Hat Enterprise Linux mit Kickstart
+  Konfiguration von Netzwerkdiensten für den automatischen Start beim Booten
+  Installation und Aktualisierung von Softwarepaketen entweder vom Red Hat Network, einem Remote Repository oder dem lokalen Dateisystem
+  Ordnungsgemäße Aktualisierung des KernelPakets zur Gewährleistung eines bootfähigen Systems
+  Konfiguration von FirewallEinstellungen mit firewallconfig, firewallcmd oder iptables
+  Starten, Anhalten und Statusprüfung von Netzwerkdiensten
