@@ -34,6 +34,15 @@ add network interface to zone: `firewall-cmd --permanent --zone=internal --chang
 
 get zone of an interface: `firewall-cmd --get-zone-of-interface=eth0`
 
+### How To
+
+#### Allow NFS
+```
+firewall-cmd --add-service=rpc-bind --permanent && \
+firewall-cmd --add-service=mountd --permanent && \
+firewall-cmd --add-service=nfs --permanent
+```
+
 ### Sources
 
 A **zone** can be bound to a network interface (see above) and/or to a **source**
