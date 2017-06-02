@@ -40,7 +40,8 @@ get zone of an interface: `firewall-cmd --get-zone-of-interface=eth0`
 ```
 firewall-cmd --add-service=rpc-bind --permanent && \
 firewall-cmd --add-service=mountd --permanent && \
-firewall-cmd --add-service=nfs --permanent
+firewall-cmd --add-service=nfs --permanent && \
+systemctl restart firewalld.service
 ```
 
 ### Sources
