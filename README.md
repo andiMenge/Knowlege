@@ -29,7 +29,7 @@ run `/bin/update-ca-trust` to update system CA's
 ## Kubernetes
 
 - Kubelet/ Kube-Proxy **Root dir**: `/var/lib/`
-- emptyDir Volume location based on *kubelet* root dir
+- emptyDir Volume location based on *kubelet* root dir and can fill up your partition
 
 ## Helm
 
