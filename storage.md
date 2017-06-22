@@ -1,4 +1,6 @@
 # iScsi
+## Get Initiator Name
+`cat /etc/iscsi/initiatorname.iscsi`
 
 ## Discover targets
 `iscsiadm -m discovery -t st -p <host-ip>`
