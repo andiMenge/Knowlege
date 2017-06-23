@@ -26,11 +26,6 @@ copy ca.pem to `/etc/pki/ca-trust/source/anchors`
 
 run `/bin/update-ca-trust` to update system CA's
 
-## Kubernetes
-
-- Kubelet/ Kube-Proxy **Root dir**: `/var/lib/`
-- emptyDir Volume location based on *kubelet* root dir and can fill up your partition
-
 ## Helm
 
 - Control Whitespace Trimming with dashes `{{- if .Values.persistence }}`
