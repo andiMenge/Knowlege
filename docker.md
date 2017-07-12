@@ -25,4 +25,4 @@ copy ca.pem to `/etc/pki/ca-trust/source/anchors`
 run `/bin/update-ca-trust` to update system CA's
 
 # Bulk Remove dead Containers
-`docker rm $(docker ps -a | grep -i dead | awk '{ print $8}')`
+`docker rm $(docker ps -a -f status=dead --format "{{.ID}}")`
