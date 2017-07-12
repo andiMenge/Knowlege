@@ -7,4 +7,4 @@
 
 # Pod Events
 
-- 'Need to kill Pod' indicates a resource limit being exceeded
+- `Need to kill Pod` indicates a resource limit being exceeded
