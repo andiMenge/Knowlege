@@ -26,3 +26,6 @@ run `/bin/update-ca-trust` to update system CA's
 
 # Bulk Remove dead Containers
 `docker rm $(docker ps -a -f status=dead --format "{{.ID}}")`
+
+# Docker and the Container Runtime
+`dockerd` uses `containerd` as its interface to `cgroups`, `namespaces` and `selinux`. If dockerd starts it automacially starts containerd.
