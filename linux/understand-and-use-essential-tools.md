@@ -11,6 +11,9 @@
 ## Use grep and regular expressions to analyze text
   `grep <search-string> <file/stdin>`
   `grep 'hello\.gif' file` # escape the . (wildcard)
+  
+## Log to journal
+`logger <my-msg>`
 ## Access remote systems using ssh
 ## Log in and switch users in multiuser targets
 ## Archive, compress, unpack, and uncompress files using tar, star, gzip, and bzip2
