@@ -22,6 +22,7 @@ Module details
 
 create file in `/etc/modprobe.d/`
 
+*example*: 
 blacklist-uas.conf
 ```
 blacklist uas
