@@ -18,6 +18,8 @@ Module details
 >`modinfo module`
 
 # Blacklist Modules
+> prohibit loading of specific kernel modules
+
 create file in `/etc/modprobe.d/`
 
 blacklist-uas.conf
