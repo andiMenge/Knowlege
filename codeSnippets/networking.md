@@ -13,5 +13,5 @@ Find host details without ICMP
 
 8972 + tcp-overhead = 9000 MTU
 
-## Remote TCP Inspection
+## Remote Network Traffic Inspection
 `ssh <srv> sudo tcpdump -i <interface> -U -s0 -w - 'not port 22' | wireshark -k -i -`
