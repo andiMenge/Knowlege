@@ -19,12 +19,19 @@ replace whitespace delimter with something else
 `kubectl get namespace | awk  '{print $1}' |grep -v NAME |xargs |sed -e 's/ /,/g'`
 
 ## Error Handling
-`set -eE` Terminate on any error (return code != 0) but execute the ERR trap before exiting
+### Traps
+```
+# passes the string per signal to the cleanup() function
+trap 'cleanup "INT signal received"' INT
+trap 'cleanup "TERM signal received"' TERM
+trap 'cleanup "unknown error occurred"' ERR
+```
 
 ```
-trap 'my-cleanup-func "INT signal received"' INT
-trap 'my-cleanup-func "TERM signal received"' TERM
-trap 'my-cleanup-func "unknown error occurred"' ERR
+cleanup(){
+  printf "\n$1\n"
+  exit 1
+}
 ```
 
 ## Check if binary exists
