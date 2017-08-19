@@ -44,3 +44,6 @@ checkRequirements() {
   done
 }
 ```
+
+## Variable Substitution
+`foo=$(date "+%Y")`
