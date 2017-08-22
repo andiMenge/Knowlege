@@ -172,3 +172,13 @@ if err != nil {
 w.WriteHeader(http.StatusOK)
 ```
 
+## Backoff Retry Loop - Work in progress
+
+```
+retry := 0
+for retry < 10 {
+  time.Sleep(time.Second * time.Duration(2+retry))
+  retry += 1
+}	
+```
+
