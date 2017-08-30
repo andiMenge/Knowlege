@@ -29,4 +29,4 @@ blacklist uas
 ```
 
 # Find OOM (out of memory) Killed Processes
-`journalctl -k` search `/` for 'oom'
+`journalctl -k` search `/` for 'invoked oom-killer'
