@@ -1,4 +1,3 @@
-# Misc
 > IOP/s = Input or Output operations per second
 
 > Throughput = How many MB/s can you read/write continuously
