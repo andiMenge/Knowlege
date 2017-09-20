@@ -30,6 +30,7 @@ Sequential Writes
 Sequential Reads
 `sync;fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4M --iodepth=256 --size=10G --readwrite=read --ramp_time=4`
 
+[src](https://smcleod.net/benchmarking-io/)
 
 ## ioping 
 https://github.com/koct9i/ioping
