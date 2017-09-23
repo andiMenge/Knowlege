@@ -22,3 +22,9 @@ https://codesequoia.wordpress.com/2010/04/19/buffering-delay-and-mpeg-2-transpor
 ## FFMPEG Interlaced h.264@TS CBR, fixed GOP
 
 ```ffmpeg -i in -c:v libx264 -preset slow -c:a copy -b:v 2000k -minrate 2000k -maxrate 2000k -r 25 -g 25 -bufsize 2000k -nal-hrd cbr -x264-params scenecut=-1:interlaced=1 -t 00:05:00 out.ts```
+
+## GoPro Timelapse to Video
+`cd goPro image folder`
+
+### With upside down correction
+`find . -type f -name *.JPG  -exec cat {} ';' | ffmpeg -f image2pipe -r 12 -i - -c:v h264 -preset ultrafast -pix_fmt yuv420p -s hd720 -vf "vflip,hflip" -r 24 foo.mp4`
