@@ -27,4 +27,4 @@ https://codesequoia.wordpress.com/2010/04/19/buffering-delay-and-mpeg-2-transpor
 `cd goPro image folder`
 
 ### With upside down correction
-`find . -type f -name *.JPG  -exec cat {} ';' | ffmpeg -f image2pipe -r 12 -i - -c:v h264 -preset ultrafast -pix_fmt yuv420p -s hd720 -vf "vflip,hflip" -r 24 foo.mp4`
+`find -s . -type f -name *.JPG  -exec cat {} ';' | ffmpeg -f image2pipe -r 12 -i - -c:v h264 -preset ultrafast -pix_fmt yuv420p -s hd720 -vf "vflip,hflip" -r 24 foo.mp4`
