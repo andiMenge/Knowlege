@@ -42,6 +42,9 @@ https://github.com/koct9i/ioping
 ## Discover targets
 `iscsiadm -m discovery -t st -p <host-ip>`
 
+## List Sessions
+`iscsiadm -m session`
+
 ## Mount target
 `iscsiadm -m node --targetname "<iqn>" --portal "<host-ip>" --login`
 
