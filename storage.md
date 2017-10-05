@@ -48,5 +48,8 @@ https://github.com/koct9i/ioping
 ## Mount target
 `iscsiadm -m node --targetname "<iqn>" --portal "<host-ip>" --login`
 
+## Find attached disk for iscsi session
+`iscsiadm --mode session -P 3`
+
 ## Unmount target
 `iscsiadm -m node --targetname "<iqn>" --portal "<host-ip>" --logout`
