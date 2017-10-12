@@ -28,3 +28,6 @@ https://codesequoia.wordpress.com/2010/04/19/buffering-delay-and-mpeg-2-transpor
 
 ### With upside down correction
 `find -s . -type f -name *.JPG  -exec cat {} ';' | ffmpeg -f image2pipe -r 12 -i - -c:v h264 -preset ultrafast -pix_fmt yuv420p -s hd720 -vf "vflip,hflip" -r 24 foo.mp4`
+
+### computer levels to video levels
+-vf scale=in_range=pc:out_range=tv
