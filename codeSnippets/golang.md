@@ -182,3 +182,90 @@ for retry < 10 {
 }	
 ```
 
+# Logging
+## Zerolog custom logger
+```
+package main
+
+import (
+	"github.com/rs/zerolog"
+	"os"
+	"time"
+)
+
+// the name for the log field 'annotation.name'
+const annotationName = "georender"
+
+var id = "foo"
+
+// new logger with custom fields
+var log = zerolog.New(os.Stdout).With().
+	Timestamp().
+	Str("annotation.name", annotationName).
+	Str("correlationId", id).
+	Logger()
+
+func init() {
+	// configure logger
+	zerolog.TimestampFieldName = "@timestamp"
+	zerolog.LevelFieldName = "level"
+	zerolog.MessageFieldName = "message"
+	zerolog.TimestampFunc = func() time.Time { // format timestamp as utc
+		return time.Now().UTC()
+	}
+}
+
+func main() {
+	log.Info().Msg("foo")
+	err := "lol"
+	log.Error().Msg("this a error: %s", err)
+}
+
+```
+
+## Logrus
+```
+package main
+
+import (
+	log "github.com/sirupsen/logrus"
+	"time"
+)
+
+// custom formatter for UTC support
+type UTCFormatter struct {
+	log.Formatter
+}
+
+const annotationName = "georender"
+
+var logger = log.WithFields(log.Fields{"annotation.name": annotationName})
+
+// Custom formatter needs to implement the format()
+func (u UTCFormatter) Format(e *log.Entry) ([]byte, error) {
+	e.Time = e.Time.UTC()
+	return u.Formatter.Format(e)
+}
+
+// configure formatter with custom field names, timestamp format
+func init() {
+	formatter := UTCFormatter{&log.JSONFormatter{
+		FieldMap: log.FieldMap{
+			log.FieldKeyTime:  "@timestamp",
+			log.FieldKeyLevel: "level",
+			log.FieldKeyMsg:   "message",
+		},
+		TimestampFormat:  time.RFC3339,
+		DisableTimestamp: false,
+	}}
+
+	log.SetFormatter(formatter)
+}
+
+func main() {
+
+	logger.Info("Some info. Earth is not flat.")
+	logger.Error("foobar")
+}
+
+```
