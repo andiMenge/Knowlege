@@ -1,5 +1,7 @@
 # Bash Code Snippets
 
+Script error handling `set -euo pipefail`
+
 ## Arrays
 
 string array `arr=("bar1" "bar2")`
